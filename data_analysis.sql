@@ -19,5 +19,12 @@ FROM dept_managerID, departments, employee_info
 WHERE dept_managerID.dept_no = departments.dept_no AND dept_managerID.emp_no = employee_info.emp_no; 
 
 
+-- List the department of each employee with the following information: employee number, last name, first name, and department name.
+
+SELECT DISTINCT employeeID_dept.emp_no, employee_info.last_name, employee_info.first_name, departments.dept_name 
+FROM employeeID_dept, employee_info, departments 
+WHERE employeeID_dept.emp_no = employee_info.emp_no AND employeeID_dept.dept_no= departments.dept_no
+LIMIT 100; 
+
 
 
