@@ -47,5 +47,16 @@ CREATE TABLE dept_managerID (
 SELECT * 
 FROM dept_managerID;
 
+-- create employee ID and department table
 
+CREATE TABLE employeeID_dept (
+    emp_no INT   NOT NULL,
+    dept_no VARCHAR(10)   NOT NULL
+);
+
+-- display employee ID and department table
+
+SELECT * 
+FROM employeeID_dept
+LIMIT 100;
 
