@@ -60,3 +60,14 @@ SELECT *
 FROM employeeID_dept
 LIMIT 100;
 
+-- create employee title table
+
+CREATE TABLE title (
+    title_id VARCHAR(10)   NOT NULL,
+    title VARCHAR(30)   NOT NULL
+);
+
+-- display employee title table
+
+SELECT * 
+FROM title;
