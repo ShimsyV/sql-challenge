@@ -71,3 +71,18 @@ CREATE TABLE title (
 
 SELECT * 
 FROM title;
+
+-- create employee salary table
+
+CREATE TABLE salary (
+    emp_no VARCHAR(10)   NOT NULL,
+    salary INT   NOT NULL
+);
+
+-- display employee salary table
+
+SELECT * 
+FROM salary
+LIMIT 100;
+
+
