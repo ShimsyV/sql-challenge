@@ -35,3 +35,17 @@ CREATE TABLE departments (
 SELECT * 
 FROM departments;
 
+-- create department manager ID table
+
+CREATE TABLE dept_managerID (
+    dept_no VARCHAR(10)   NOT NULL,
+    emp_no INT   NOT NULL
+);
+
+-- display departments manager ID table
+
+SELECT * 
+FROM dept_managerID;
+
+
+
