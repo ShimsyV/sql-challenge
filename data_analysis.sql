@@ -26,5 +26,9 @@ FROM employeeID_dept, employee_info, departments
 WHERE employeeID_dept.emp_no = employee_info.emp_no AND employeeID_dept.dept_no= departments.dept_no
 LIMIT 100; 
 
+-- List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
+SELECT first_name,last_name,sex
+FROM employee_info 
+WHERE first_name = 'Hercules' and last_name like 'B%';
 
