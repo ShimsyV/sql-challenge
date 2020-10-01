@@ -47,4 +47,10 @@ FROM employeeID_dept, employee_info, departments
 WHERE employeeID_dept.emp_no = employee_info.emp_no AND employeeID_dept.dept_no= departments.dept_no AND (departments.dept_name = 'Sales' OR departments.dept_name = 'Development')
 ORDER BY emp_no; 
 
+-- In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+
+SELECT employee_info.last_name, COUNT(employee_info.last_name) AS "Emp Last Name Count" 
+FROM employee_info
+GROUP BY employee_info.last_name 
+ORDER BY "Emp Last Name Count" DESC; 
 
