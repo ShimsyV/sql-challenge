@@ -73,9 +73,10 @@ SELECT *
 FROM title;
 
 -- create employee salary table
+DROP TABLE salary;
 
 CREATE TABLE salary (
-    emp_no VARCHAR(10)   NOT NULL,
+    emp_no INT  NOT NULL,
     salary INT   NOT NULL
 );
 
@@ -85,4 +86,28 @@ SELECT *
 FROM salary
 LIMIT 100;
 
+-- adding foreign key for employeeID_dept to employee number from employee info table
+
+ALTER TABLE employeeID_dept ADD CONSTRAINT fk_employeeID_dept_emp_no FOREIGN KEY(emp_no)
+REFERENCES employee_info (emp_no);
+
+-- adding foreign key for employeeID_dept to department number from departments table
+
+ALTER TABLE employeeID_dept ADD CONSTRAINT fk_employeeID_dept_dept_no FOREIGN KEY(dept_no)
+REFERENCES departments (dept_no);
+
+-- adding foreign key for department manager ID to department number from departments table
+
+ALTER TABLE dept_managerID ADD CONSTRAINT fk_dept_managerID_dept_no FOREIGN KEY(dept_no)
+REFERENCES departments (dept_no);
+
+-- adding foreign key for department manager ID to employee number from employee info table
+
+ALTER TABLE dept_managerID ADD CONSTRAINT fk_dept_managerID_emp_no FOREIGN KEY(emp_no)
+REFERENCES employee_info (emp_no);
+
+-- adding foreign key for salary to employee number from employee info table
+
+ALTER TABLE salary ADD CONSTRAINT fk_salary_emp_no FOREIGN KEY(emp_no)
+REFERENCES employee_info (emp_no);
 
