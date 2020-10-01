@@ -62,9 +62,14 @@ LIMIT 100;
 
 -- create employee title table
 
+DROP TABLE title;
+
 CREATE TABLE title (
     title_id VARCHAR(10)   NOT NULL,
-    title VARCHAR(30)   NOT NULL
+    title VARCHAR(30)   NOT NULL,
+    CONSTRAINT pk_title PRIMARY KEY (
+        title_id
+     )
 );
 
 -- display employee title table
@@ -73,7 +78,6 @@ SELECT *
 FROM title;
 
 -- create employee salary table
-DROP TABLE salary;
 
 CREATE TABLE salary (
     emp_no INT  NOT NULL,
@@ -110,4 +114,10 @@ REFERENCES employee_info (emp_no);
 
 ALTER TABLE salary ADD CONSTRAINT fk_salary_emp_no FOREIGN KEY(emp_no)
 REFERENCES employee_info (emp_no);
+
+-- adding foreign key for title to employee number from employee info table
+
+ALTER TABLE employee_info ADD CONSTRAINT fk_employee_info_emp_title FOREIGN KEY(emp_title)
+REFERENCES title (title_id);
+
 
