@@ -40,4 +40,11 @@ FROM employeeID_dept, employee_info, departments
 WHERE employeeID_dept.emp_no = employee_info.emp_no AND employeeID_dept.dept_no= departments.dept_no AND departments.dept_name = 'Sales' 
 ORDER BY emp_no; 
 
+-- List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+
+SELECT DISTINCT employeeID_dept.emp_no, last_name, first_name, departments.dept_name 
+FROM employeeID_dept, employee_info, departments 
+WHERE employeeID_dept.emp_no = employee_info.emp_no AND employeeID_dept.dept_no= departments.dept_no AND (departments.dept_name = 'Sales' OR departments.dept_name = 'Development')
+ORDER BY emp_no; 
+
 
