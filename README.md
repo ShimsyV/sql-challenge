@@ -66,10 +66,10 @@ Once I had a complete database, I did the following:
 ![](https://github.com/ShimsyV/sql-challenge/blob/master/images/AnalysisQ8.PNG)
 
 
-##### As I examined the data,I was overcome with a creeping suspicion that the dataset is fake. I summarized that my boss handed me spurious data in order to test the data engineering skills of a new employee. To confirm my hunch,I decided to take the following steps to generate a visualization of the data, with which I confronted my boss:
+### As I examined the data,I was overcome with a creeping suspicion that the dataset is fake. I summarized that my boss handed me spurious data in order to test the data engineering skills of a new employee. To confirm my hunch,I decided to take the following steps to generate a visualization of the data, with which I confronted my boss:
 
 
-##### I imported the SQL database into Pandas. 
+#### I imported the SQL database into Pandas. 
 
 #### I created a histogram to visualize the most common salary ranges for employees.
 
